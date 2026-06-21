@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDrill } from "../hooks/useDrill";
+import { useSpeech } from "../hooks/useSpeech";
 import verbsData from "../data/verbs.json";
 import BlankInput from "../components/BlankInput";
 import ProgressBar from "../components/ProgressBar";
@@ -45,6 +46,7 @@ function generateCards(count: number): DrillCard[] {
 export default function DailyDrill() {
   const navigate = useNavigate();
   const { recordAttempt } = useDrill();
+  const { speak } = useSpeech();
   const [cards, setCards] = useState<DrillCard[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [results, setResults] = useState<Record<string, boolean>>({});
@@ -120,7 +122,16 @@ export default function DailyDrill() {
         <p className="text-xs text-gray-400 mb-1 dark:text-gray-500">
           Card {currentIdx + 1} of {cards.length}
         </p>
-        <p className="text-lg font-medium text-gray-900 dark:text-white mb-4">{current?.prompt}</p>
+        <p className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <span className="flex-1">{current?.prompt}</span>
+          <button
+            type="button"
+            onClick={() => speak(current?.prompt || '')}
+            className="text-lg hover:scale-110 transition-transform flex-shrink-0"
+            title="Listen"
+            aria-label="Listen to prompt"
+          >🔊</button>
+        </p>
         <BlankInput
           id={current?.id || "q-" + currentIdx}
           answers={current ? [current.correctAnswer] : []}
