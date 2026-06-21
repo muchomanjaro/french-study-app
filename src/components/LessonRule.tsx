@@ -1,0 +1,3 @@
+interface LessonRuleProps{title:string;description:string;example?:string;note?:string;}
+export default function LessonRule({title,description,example,note}:LessonRuleProps){return(<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4'><h4 className='font-semibold text-blue-800 dark:text-blue-300 text-sm mb-1'>{title}</h4><p className='text-sm text-gray-700 dark:text-gray-300 mb-2'>{description}</p>{example&&<p className='text-xs text-gray-500 dark:text-gray-400 italic'>&ldquo;{example}&rdquo;</p>}{note&&<p className='text-xs text-amber-600 dark:text-amber-400 mt-1'>{note}</p>}</div>);
+}

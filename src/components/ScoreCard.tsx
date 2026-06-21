@@ -1,0 +1,3 @@
+interface ScoreCardProps{score:number;total:number;label?:string;className?:string;}
+export default function ScoreCard({score,total,label,className=''}:ScoreCardProps){const pct=total>0?Math.round(score/total*100):0;const color=pct>=80?'text-green-600 dark:text-green-400':pct>=50?'text-yellow-600 dark:text-yellow-400':'text-red-600 dark:text-red-400';return(<div className={'bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 text-center '+className}><p className='text-sm text-gray-500 dark:text-gray-400 mb-1'>{label||'Score'}</p><p className={'text-3xl font-bold '+color}>{pct}%</p><p className='text-xs text-gray-400 dark:text-gray-500 mt-1'>{score}/{total} correct</p></div>);
+}

@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #1a56db;
+    --color-primary-dark: #1648c0;
+    --color-accent: #e8d5b7;
+  }
+  body {
+    @apply antialiased;
+  }
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 
+           transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 
+           dark:hover:bg-gray-600 transition-colors font-medium;
+  }
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl border border-gray-200 
+           dark:border-gray-700 p-4 md:p-6;
+  }
+  .input-field {
+    @apply w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg 
+           bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 
+           focus:border-transparent outline-none transition;
+  }
+}

@@ -1,0 +1,3 @@
+interface ProgressBarProps{value:number;max:number;label?:string;className?:string;}
+export default function ProgressBar({value,max,label,className=''}:ProgressBarProps){const pct=max>0?Math.min(100,Math.round(value/max*100)):0;return(<div className={'w-full ' + className}><div className='flex justify-between text-xs text-gray-600 mb-1 dark:text-gray-400'><span>{label||'Progress'}</span><span>{value}/{max}</span></div><div className='w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700'><div className='bg-blue-600 h-2.5 rounded-full transition-all duration-300 dark:bg-blue-500' style={{width:pct+'%'}}/></div></div>);
+}
