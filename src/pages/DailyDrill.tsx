@@ -31,7 +31,7 @@ function generateCards(count: number): DrillCard[] {
     const pi = Math.floor(Math.random() * conjugations.length);
     cards.push({
       id: "drill-" + cards.length,
-      prompt: "Conjugate "" + v.infinitive + "" (" + v.english + ") in " + tense + " for "" + PRONOUNS[pi] + """,
+      prompt: `Conjugate ‘${v.infinitive}’ (${v.english}) in ${tense} for ‘${PRONOUNS[pi]}’`,
       correctAnswer: conjugations[pi],
       type: "verb",
       infinitive: v.infinitive,
