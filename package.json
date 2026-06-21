@@ -1,0 +1,39 @@
+{
+  "name": "french-study-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "French language study app — interactive exercises, spaced repetition, offline-first PWA",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "capacitor:sync": "npx cap sync",
+    "capacitor:open:ios": "npx cap open ios",
+    "capacitor:open:android": "npx cap open android"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
+    "dexie": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/ios": "^8.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vite-plugin-pwa": "^1.0.0"
+  }
+}

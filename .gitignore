@@ -1,0 +1,13 @@
+.hermes-tmp*
+scripts/
+src/data/
+node_modules/
+dist/
+.capawesome/
+android/
+ios/
+*.local
+.env
+.env.local
+.DS_Store
+*.tsbuildinfo
