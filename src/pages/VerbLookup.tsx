@@ -96,7 +96,7 @@ export default function VerbLookup() {
                     : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200"
                 }`}
               >
-                {TENSE_LABELS[tense] || tense}
+                {TENSE_LABELS[tense] || tense.replace(/_/g, ' ')}
               </button>
             ))}
           </div>
