@@ -1,0 +1,1523 @@
+{
+  "verbs": [
+    {
+      "infinitive": "aller",
+      "english": "to go",
+      "auxiliary": "être",
+      "past_participle": "allé",
+      "tenses": {
+        "présent": [
+          "vais",
+          "vas",
+          "va",
+          "allons",
+          "allez",
+          "vont"
+        ],
+        "imparfait": [
+          "allais",
+          "allais",
+          "allait",
+          "allions",
+          "alliez",
+          "allaient"
+        ],
+        "passé_simple": [
+          "allai",
+          "allas",
+          "alla",
+          "allâmes",
+          "allâtes",
+          "allèrent"
+        ],
+        "futur": [
+          "irai",
+          "iras",
+          "ira",
+          "irons",
+          "irez",
+          "iront"
+        ],
+        "conditionnel_présent": [
+          "irais",
+          "irais",
+          "irait",
+          "irions",
+          "iriez",
+          "iraient"
+        ],
+        "subjonctif_présent": [
+          "aille",
+          "ailles",
+          "aille",
+          "allions",
+          "alliez",
+          "aillent"
+        ],
+        "imparfait_du_subjonctif": [
+          "allasse",
+          "allasses",
+          "allât",
+          "allassions",
+          "allassiez",
+          "allassent"
+        ],
+        "passé_composé": [
+          "suis allé(e)",
+          "es allé(e)",
+          "est allé(e)",
+          "sommes allé(e)s",
+          "êtes allé(e)(s)",
+          "sont allé(e)s"
+        ],
+        "plus_que_parfait": [
+          "étais allé(e)",
+          "étais allé(e)",
+          "était allé(e)",
+          "étions allé(e)s",
+          "étiez allé(e)(s)",
+          "étaient allé(e)s"
+        ],
+        "passé_antérieur": [
+          "fus allé(e)",
+          "fus allé(e)",
+          "fut allé(e)",
+          "fûmes allé(e)s",
+          "fûtes allé(e)(s)",
+          "furent allé(e)s"
+        ],
+        "futur_antérieur": [
+          "serai allé(e)",
+          "seras allé(e)",
+          "sera allé(e)",
+          "serons allé(e)s",
+          "serez allé(e)(s)",
+          "seront allé(e)s"
+        ],
+        "conditionnel_passé": [
+          "serais allé(e)",
+          "serais allé(e)",
+          "serait allé(e)",
+          "serions allé(e)s",
+          "seriez allé(e)(s)",
+          "seraient allé(e)s"
+        ],
+        "subjonctif_passé": [
+          "sois allé(e)",
+          "sois allé(e)",
+          "soit allé(e)",
+          "soyons allé(e)s",
+          "soyez allé(e)(s)",
+          "soient allé(e)s"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "fusse allé(e)",
+          "fusses allé(e)",
+          "fût allé(e)",
+          "fussions allé(e)s",
+          "fussiez allé(e)(s)",
+          "fussent allé(e)s"
+        ]
+      },
+      "idioms": [
+        "aller bien",
+        "aller mal",
+        "aller voir",
+        "s'en aller"
+      ]
+    },
+    {
+      "infinitive": "avoir",
+      "english": "to have",
+      "auxiliary": "avoir",
+      "past_participle": "eu",
+      "tenses": {
+        "présent": [
+          "ai",
+          "as",
+          "a",
+          "avons",
+          "avez",
+          "ont"
+        ],
+        "imparfait": [
+          "avais",
+          "avais",
+          "avait",
+          "avions",
+          "aviez",
+          "avaient"
+        ],
+        "passé_simple": [
+          "eus",
+          "eus",
+          "eut",
+          "eûmes",
+          "eûtes",
+          "eurent"
+        ],
+        "futur": [
+          "aurai",
+          "auras",
+          "aura",
+          "aurons",
+          "aurez",
+          "auront"
+        ],
+        "conditionnel_présent": [
+          "aurais",
+          "aurais",
+          "aurait",
+          "aurions",
+          "auriez",
+          "auraient"
+        ],
+        "subjonctif_présent": [
+          "aie",
+          "aies",
+          "ait",
+          "ayons",
+          "ayez",
+          "aient"
+        ],
+        "imparfait_du_subjonctif": [
+          "eusse",
+          "eusses",
+          "eût",
+          "eussions",
+          "eussiez",
+          "eussent"
+        ],
+        "passé_composé": [
+          "ai eu",
+          "as eu",
+          "a eu",
+          "avons eu",
+          "avez eu",
+          "ont eu"
+        ],
+        "plus_que_parfait": [
+          "avais eu",
+          "avais eu",
+          "avait eu",
+          "avions eu",
+          "aviez eu",
+          "avaient eu"
+        ],
+        "passé_antérieur": [
+          "eus eu",
+          "eus eu",
+          "eut eu",
+          "eûmes eu",
+          "eûtes eu",
+          "eurent eu"
+        ],
+        "futur_antérieur": [
+          "aurai eu",
+          "auras eu",
+          "aura eu",
+          "aurons eu",
+          "aurez eu",
+          "auront eu"
+        ],
+        "conditionnel_passé": [
+          "aurais eu",
+          "aurais eu",
+          "aurait eu",
+          "aurions eu",
+          "auriez eu",
+          "auraient eu"
+        ],
+        "subjonctif_passé": [
+          "aie eu",
+          "aies eu",
+          "ait eu",
+          "ayons eu",
+          "ayez eu",
+          "aient eu"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse eu",
+          "eusses eu",
+          "eût eu",
+          "eussions eu",
+          "eussiez eu",
+          "eussent eu"
+        ]
+      },
+      "idioms": [
+        "avoir faim",
+        "avoir soif",
+        "avoir chaud",
+        "avoir froid",
+        "avoir raison",
+        "avoir tort",
+        "avoir l'air",
+        "avoir besoin de",
+        "avoir envie de",
+        "avoir peur"
+      ]
+    },
+    {
+      "infinitive": "devoir",
+      "english": "to have to, must",
+      "auxiliary": "avoir",
+      "past_participle": "dû",
+      "tenses": {
+        "présent": [
+          "dois",
+          "dois",
+          "doit",
+          "devons",
+          "devez",
+          "doivent"
+        ],
+        "imparfait": [
+          "devais",
+          "devais",
+          "devait",
+          "devions",
+          "deviez",
+          "devaient"
+        ],
+        "passé_simple": [
+          "dus",
+          "dus",
+          "dut",
+          "dûmes",
+          "dûtes",
+          "durent"
+        ],
+        "futur": [
+          "devrai",
+          "devras",
+          "devra",
+          "devrons",
+          "devrez",
+          "devront"
+        ],
+        "conditionnel_présent": [
+          "devrais",
+          "devrais",
+          "devrait",
+          "devrions",
+          "devriez",
+          "devraient"
+        ],
+        "subjonctif_présent": [
+          "doive",
+          "doives",
+          "doive",
+          "devions",
+          "deviez",
+          "doivent"
+        ],
+        "imparfait_du_subjonctif": [
+          "dusse",
+          "dusses",
+          "dût",
+          "dussions",
+          "dussiez",
+          "dussent"
+        ],
+        "passé_composé": [
+          "ai dû",
+          "as dû",
+          "a dû",
+          "avons dû",
+          "avez dû",
+          "ont dû"
+        ],
+        "plus_que_parfait": [
+          "avais dû",
+          "avais dû",
+          "avait dû",
+          "avions dû",
+          "aviez dû",
+          "avaient dû"
+        ],
+        "passé_antérieur": [
+          "eus dû",
+          "eus dû",
+          "eut dû",
+          "eûmes dû",
+          "eûtes dû",
+          "eurent dû"
+        ],
+        "futur_antérieur": [
+          "aurai dû",
+          "auras dû",
+          "aura dû",
+          "aurons dû",
+          "aurez dû",
+          "auront dû"
+        ],
+        "conditionnel_passé": [
+          "aurais dû",
+          "aurais dû",
+          "aurait dû",
+          "aurions dû",
+          "auriez dû",
+          "auraient dû"
+        ],
+        "subjonctif_passé": [
+          "aie dû",
+          "aies dû",
+          "ait dû",
+          "ayons dû",
+          "ayez dû",
+          "aient dû"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse dû",
+          "eusses dû",
+          "eût dû",
+          "eussions dû",
+          "eussiez dû",
+          "eussent dû"
+        ]
+      },
+      "idioms": [
+        "devoir à",
+        "se devoir de",
+        "en devoir"
+      ]
+    },
+    {
+      "infinitive": "dire",
+      "english": "to say, to tell",
+      "auxiliary": "avoir",
+      "past_participle": "dit",
+      "tenses": {
+        "présent": [
+          "dis",
+          "dis",
+          "dit",
+          "disons",
+          "dites",
+          "disent"
+        ],
+        "imparfait": [
+          "disais",
+          "disais",
+          "disait",
+          "disions",
+          "disiez",
+          "disaient"
+        ],
+        "passé_simple": [
+          "dis",
+          "dis",
+          "dit",
+          "dîmes",
+          "dîtes",
+          "dirent"
+        ],
+        "futur": [
+          "dirai",
+          "diras",
+          "dira",
+          "dirons",
+          "direz",
+          "diront"
+        ],
+        "conditionnel_présent": [
+          "dirais",
+          "dirais",
+          "dirait",
+          "dirions",
+          "diriez",
+          "diraient"
+        ],
+        "subjonctif_présent": [
+          "dise",
+          "dises",
+          "dise",
+          "disions",
+          "disiez",
+          "disent"
+        ],
+        "imparfait_du_subjonctif": [
+          "disse",
+          "dissess",
+          "dît",
+          "dissions",
+          "dissiez",
+          "dissent"
+        ],
+        "passé_composé": [
+          "ai dit",
+          "as dit",
+          "a dit",
+          "avons dit",
+          "avez dit",
+          "ont dit"
+        ],
+        "plus_que_parfait": [
+          "avais dit",
+          "avais dit",
+          "avait dit",
+          "avions dit",
+          "aviez dit",
+          "avaient dit"
+        ],
+        "passé_antérieur": [
+          "eus dit",
+          "eus dit",
+          "eut dit",
+          "eûmes dit",
+          "eûtes dit",
+          "eurent dit"
+        ],
+        "futur_antérieur": [
+          "aurai dit",
+          "auras dit",
+          "aura dit",
+          "aurons dit",
+          "aurez dit",
+          "auront dit"
+        ],
+        "conditionnel_passé": [
+          "aurais dit",
+          "aurais dit",
+          "aurait dit",
+          "aurions dit",
+          "auriez dit",
+          "auraient dit"
+        ],
+        "subjonctif_passé": [
+          "aie dit",
+          "aies dit",
+          "ait dit",
+          "ayons dit",
+          "ayez dit",
+          "aient dit"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse dit",
+          "eusses dit",
+          "eût dit",
+          "eussions dit",
+          "eussiez dit",
+          "eussent dit"
+        ]
+      },
+      "idioms": [
+        "c'est-à-dire",
+        "vouloir dire",
+        "pour ainsi dire",
+        "autrement dit"
+      ]
+    },
+    {
+      "infinitive": "faire",
+      "english": "to do, to make",
+      "auxiliary": "avoir",
+      "past_participle": "fait",
+      "tenses": {
+        "présent": [
+          "fais",
+          "fais",
+          "fait",
+          "faisons",
+          "faites",
+          "font"
+        ],
+        "imparfait": [
+          "faisais",
+          "faisais",
+          "faisait",
+          "fassions",
+          "fassiez",
+          "faisaient"
+        ],
+        "passé_simple": [
+          "fis",
+          "fis",
+          "fit",
+          "fîmes",
+          "fîtes",
+          "firent"
+        ],
+        "futur": [
+          "ferai",
+          "feras",
+          "fera",
+          "ferons",
+          "ferez",
+          "feront"
+        ],
+        "conditionnel_présent": [
+          "ferais",
+          "ferais",
+          "ferait",
+          "ferions",
+          "feriez",
+          "feraient"
+        ],
+        "subjonctif_présent": [
+          "fasse",
+          "fasses",
+          "fasse",
+          "fassions",
+          "fassiez",
+          "fassent"
+        ],
+        "imparfait_du_subjonctif": [
+          "fisse",
+          "fisses",
+          "fît",
+          "fissions",
+          "fissiez",
+          "fissent"
+        ],
+        "passé_composé": [
+          "ai fait",
+          "as fait",
+          "a fait",
+          "avons fait",
+          "avez fait",
+          "ont fait"
+        ],
+        "plus_que_parfait": [
+          "avais fait",
+          "avais fait",
+          "avait fait",
+          "avions fait",
+          "aviez fait",
+          "avaient fait"
+        ],
+        "passé_antérieur": [
+          "eus fait",
+          "eus fait",
+          "eut fait",
+          "eûmes fait",
+          "eûtes fait",
+          "eurent fait"
+        ],
+        "futur_antérieur": [
+          "aurai fait",
+          "auras fait",
+          "aura fait",
+          "aurons fait",
+          "aurez fait",
+          "auront fait"
+        ],
+        "conditionnel_passé": [
+          "aurais fait",
+          "aurais fait",
+          "aurait fait",
+          "aurions fait",
+          "auriez fait",
+          "auraient fait"
+        ],
+        "subjonctif_passé": [
+          "aie fait",
+          "aies fait",
+          "ait fait",
+          "ayons fait",
+          "ayez fait",
+          "aient fait"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse fait",
+          "eusses fait",
+          "eût fait",
+          "eussions fait",
+          "eussiez fait",
+          "eussent fait"
+        ]
+      },
+      "idioms": [
+        "faire attention",
+        "faire beau",
+        "faire mauvais",
+        "faire froid",
+        "faire chaud",
+        "faire la queue",
+        "faire peur",
+        "faire mal"
+      ]
+    },
+    {
+      "infinitive": "mettre",
+      "english": "to put",
+      "auxiliary": "avoir",
+      "past_participle": "mis",
+      "tenses": {
+        "présent": [
+          "mets",
+          "mets",
+          "met",
+          "mettons",
+          "mettez",
+          "mettent"
+        ],
+        "imparfait": [
+          "mettais",
+          "mettais",
+          "mettait",
+          "mettions",
+          "mettiez",
+          "mettaient"
+        ],
+        "passé_simple": [
+          "mis",
+          "mis",
+          "mit",
+          "mîmes",
+          "mîtes",
+          "mirent"
+        ],
+        "futur": [
+          "mettrai",
+          "mettras",
+          "mettra",
+          "mettrons",
+          "mettrez",
+          "mettront"
+        ],
+        "conditionnel_présent": [
+          "mettrais",
+          "mettrais",
+          "mettrait",
+          "mettrions",
+          "mettriez",
+          "mettraient"
+        ],
+        "subjonctif_présent": [
+          "mette",
+          "mettes",
+          "mette",
+          "mettions",
+          "mettiez",
+          "mettent"
+        ],
+        "imparfait_du_subjonctif": [
+          "misse",
+          "misses",
+          "mît",
+          "missions",
+          "missiez",
+          "missent"
+        ],
+        "passé_composé": [
+          "ai mis",
+          "as mis",
+          "a mis",
+          "avons mis",
+          "avez mis",
+          "ont mis"
+        ],
+        "plus_que_parfait": [
+          "avais mis",
+          "avais mis",
+          "avait mis",
+          "avions mis",
+          "aviez mis",
+          "avaient mis"
+        ],
+        "passé_antérieur": [
+          "eus mis",
+          "eus mis",
+          "eut mis",
+          "eûmes mis",
+          "eûtes mis",
+          "eurent mis"
+        ],
+        "futur_antérieur": [
+          "aurai mis",
+          "auras mis",
+          "aura mis",
+          "aurons mis",
+          "aurez mis",
+          "auront mis"
+        ],
+        "conditionnel_passé": [
+          "aurais mis",
+          "aurais mis",
+          "aurait mis",
+          "aurions mis",
+          "auriez mis",
+          "auraient mis"
+        ],
+        "subjonctif_passé": [
+          "aie mis",
+          "aies mis",
+          "ait mis",
+          "ayons mis",
+          "ayez mis",
+          "aient mis"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse mis",
+          "eusses mis",
+          "eût mis",
+          "eussions mis",
+          "eussiez mis",
+          "eussent mis"
+        ]
+      },
+      "idioms": [
+        "mettre au point",
+        "mettre en marche",
+        "mettre en colère",
+        "se mettre à",
+        "mettre fin à"
+      ]
+    },
+    {
+      "infinitive": "parler",
+      "english": "to speak, to talk",
+      "auxiliary": "avoir",
+      "past_participle": "parlé",
+      "tenses": {
+        "présent": [
+          "parle",
+          "parles",
+          "parle",
+          "parlons",
+          "parlez",
+          "parlent"
+        ],
+        "imparfait": [
+          "parlais",
+          "parlais",
+          "parlait",
+          "parlions",
+          "parliez",
+          "parlaient"
+        ],
+        "passé_simple": [
+          "parlai",
+          "parlas",
+          "parla",
+          "parlâmes",
+          "parlâtes",
+          "parlèrent"
+        ],
+        "futur": [
+          "parlerai",
+          "parleras",
+          "parlera",
+          "parlerons",
+          "parlerez",
+          "parleront"
+        ],
+        "conditionnel_présent": [
+          "parlerais",
+          "parlerais",
+          "parlerait",
+          "parlerions",
+          "parleriez",
+          "parleraient"
+        ],
+        "subjonctif_présent": [
+          "parle",
+          "parles",
+          "parle",
+          "parlions",
+          "parliez",
+          "parlent"
+        ],
+        "imparfait_du_subjonctif": [
+          "parlasse",
+          "parlasses",
+          "parlât",
+          "parlassions",
+          "parlassiez",
+          "parlassent"
+        ],
+        "passé_composé": [
+          "ai parlé",
+          "as parlé",
+          "a parlé",
+          "avons parlé",
+          "avez parlé",
+          "ont parlé"
+        ],
+        "plus_que_parfait": [
+          "avais parlé",
+          "avais parlé",
+          "avait parlé",
+          "avions parlé",
+          "aviez parlé",
+          "avaient parlé"
+        ],
+        "passé_antérieur": [
+          "eus parlé",
+          "eus parlé",
+          "eut parlé",
+          "eûmes parlé",
+          "eûtes parlé",
+          "eurent parlé"
+        ],
+        "futur_antérieur": [
+          "aurai parlé",
+          "auras parlé",
+          "aura parlé",
+          "aurons parlé",
+          "aurez parlé",
+          "auront parlé"
+        ],
+        "conditionnel_passé": [
+          "aurais parlé",
+          "aurais parlé",
+          "aurait parlé",
+          "aurions parlé",
+          "auriez parlé",
+          "auraient parlé"
+        ],
+        "subjonctif_passé": [
+          "aie parlé",
+          "aies parlé",
+          "ait parlé",
+          "ayons parlé",
+          "ayez parlé",
+          "aient parlé"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse parlé",
+          "eusses parlé",
+          "eût parlé",
+          "eussions parlé",
+          "eussiez parlé",
+          "eussent parlé"
+        ]
+      },
+      "idioms": [
+        "parler de",
+        "parler à",
+        "parler français",
+        "sans parler de"
+      ]
+    },
+    {
+      "infinitive": "pouvoir",
+      "english": "to be able to, can",
+      "auxiliary": "avoir",
+      "past_participle": "pu",
+      "tenses": {
+        "présent": [
+          "peux",
+          "peux",
+          "peut",
+          "pouvons",
+          "pouvez",
+          "peuvent"
+        ],
+        "imparfait": [
+          "pouvais",
+          "pouvais",
+          "pouvait",
+          "pouvions",
+          "pouviez",
+          "pouvaient"
+        ],
+        "passé_simple": [
+          "pus",
+          "pus",
+          "put",
+          "pûmes",
+          "pûtes",
+          "purent"
+        ],
+        "futur": [
+          "pourrai",
+          "pourras",
+          "pourra",
+          "pourrons",
+          "pourrez",
+          "pourront"
+        ],
+        "conditionnel_présent": [
+          "pourrais",
+          "pourrais",
+          "pourrait",
+          "pourrions",
+          "pourriez",
+          "pourraient"
+        ],
+        "subjonctif_présent": [
+          "puisse",
+          "puisses",
+          "puisse",
+          "puissions",
+          "puissiez",
+          "puissent"
+        ],
+        "imparfait_du_subjonctif": [
+          "pusse",
+          "pusses",
+          "pût",
+          "pussions",
+          "pussiez",
+          "pussent"
+        ],
+        "passé_composé": [
+          "ai pu",
+          "as pu",
+          "a pu",
+          "avons pu",
+          "avez pu",
+          "ont pu"
+        ],
+        "plus_que_parfait": [
+          "avais pu",
+          "avais pu",
+          "avait pu",
+          "avions pu",
+          "aviez pu",
+          "avaient pu"
+        ],
+        "passé_antérieur": [
+          "eus pu",
+          "eus pu",
+          "eut pu",
+          "eûmes pu",
+          "eûtes pu",
+          "eurent pu"
+        ],
+        "futur_antérieur": [
+          "aurai pu",
+          "auras pu",
+          "aura pu",
+          "aurons pu",
+          "aurez pu",
+          "auront pu"
+        ],
+        "conditionnel_passé": [
+          "aurais pu",
+          "aurais pu",
+          "aurait pu",
+          "aurions pu",
+          "auriez pu",
+          "auraient pu"
+        ],
+        "subjonctif_passé": [
+          "aie pu",
+          "aies pu",
+          "ait pu",
+          "ayons pu",
+          "ayez pu",
+          "aient pu"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse pu",
+          "eusses pu",
+          "eût pu",
+          "eussions pu",
+          "eussiez pu",
+          "eussent pu"
+        ]
+      },
+      "idioms": [
+        "n'en pouvoir plus",
+        "il se peut que"
+      ]
+    },
+    {
+      "infinitive": "savoir",
+      "english": "to know",
+      "auxiliary": "avoir",
+      "past_participle": "su",
+      "tenses": {
+        "présent": [
+          "sais",
+          "sais",
+          "sait",
+          "savons",
+          "savez",
+          "savent"
+        ],
+        "imparfait": [
+          "savais",
+          "savais",
+          "savait",
+          "savions",
+          "saviez",
+          "savaient"
+        ],
+        "passé_simple": [
+          "sus",
+          "sus",
+          "sut",
+          "sûmes",
+          "sûtes",
+          "surent"
+        ],
+        "futur": [
+          "saurai",
+          "sauras",
+          "saura",
+          "saurons",
+          "saurez",
+          "sauront"
+        ],
+        "conditionnel_présent": [
+          "saurais",
+          "saurais",
+          "saurait",
+          "saurions",
+          "sauriez",
+          "sauraient"
+        ],
+        "subjonctif_présent": [
+          "sache",
+          "saches",
+          "sache",
+          "sachions",
+          "sachiez",
+          "sachent"
+        ],
+        "imparfait_du_subjonctif": [
+          "susse",
+          "susses",
+          "sût",
+          "sussions",
+          "sussiez",
+          "sussent"
+        ],
+        "passé_composé": [
+          "ai su",
+          "as su",
+          "a su",
+          "avons su",
+          "avez su",
+          "ont su"
+        ],
+        "plus_que_parfait": [
+          "avais su",
+          "avais su",
+          "avait su",
+          "avions su",
+          "aviez su",
+          "avaient su"
+        ],
+        "passé_antérieur": [
+          "eus su",
+          "eus su",
+          "eut su",
+          "eûmes su",
+          "eûtes su",
+          "eurent su"
+        ],
+        "futur_antérieur": [
+          "aurai su",
+          "auras su",
+          "aura su",
+          "aurons su",
+          "aurez su",
+          "auront su"
+        ],
+        "conditionnel_passé": [
+          "aurais su",
+          "aurais su",
+          "aurait su",
+          "aurions su",
+          "auriez su",
+          "auraient su"
+        ],
+        "subjonctif_passé": [
+          "aie su",
+          "aies su",
+          "ait su",
+          "ayons su",
+          "ayez su",
+          "aient su"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse su",
+          "eusses su",
+          "eût su",
+          "eussions su",
+          "eussiez su",
+          "eussent su"
+        ]
+      },
+      "idioms": [
+        "savoir faire",
+        "savoir vivre",
+        "à savoir"
+      ]
+    },
+    {
+      "infinitive": "venir",
+      "english": "to come",
+      "auxiliary": "être",
+      "past_participle": "venu",
+      "tenses": {
+        "présent": [
+          "viens",
+          "viens",
+          "vient",
+          "venons",
+          "venez",
+          "viennent"
+        ],
+        "imparfait": [
+          "venais",
+          "venais",
+          "venait",
+          "venions",
+          "veniez",
+          "venaient"
+        ],
+        "passé_simple": [
+          "vins",
+          "vins",
+          "vint",
+          "vînmes",
+          "vîntes",
+          "vinrent"
+        ],
+        "futur": [
+          "viendrai",
+          "viendras",
+          "viendra",
+          "viendrons",
+          "viendrez",
+          "viendront"
+        ],
+        "conditionnel_présent": [
+          "viendrais",
+          "viendrais",
+          "viendrait",
+          "viendrions",
+          "viendriez",
+          "viendraient"
+        ],
+        "subjonctif_présent": [
+          "vienne",
+          "viennes",
+          "vienne",
+          "venions",
+          "veniez",
+          "viennent"
+        ],
+        "imparfait_du_subjonctif": [
+          "vinsee",
+          "vinsses",
+          "vînt",
+          "vinssions",
+          "vinssiez",
+          "vinssent"
+        ],
+        "passé_composé": [
+          "suis venu(e)",
+          "es venu(e)",
+          "est venu(e)",
+          "sommes venu(e)s",
+          "êtes venu(e)(s)",
+          "sont venu(e)s"
+        ],
+        "plus_que_parfait": [
+          "étais venu(e)",
+          "étais venu(e)",
+          "était venu(e)",
+          "étions venu(e)s",
+          "étiez venu(e)(s)",
+          "étaient venu(e)s"
+        ],
+        "passé_antérieur": [
+          "fus venu(e)",
+          "fus venu(e)",
+          "fut venu(e)",
+          "fûmes venu(e)s",
+          "fûtes venu(e)(s)",
+          "furent venu(e)s"
+        ],
+        "futur_antérieur": [
+          "serai venu(e)",
+          "seras venu(e)",
+          "sera venu(e)",
+          "serons venu(e)s",
+          "serez venu(e)(s)",
+          "seront venu(e)s"
+        ],
+        "conditionnel_passé": [
+          "serais venu(e)",
+          "serais venu(e)",
+          "serait venu(e)",
+          "serions venu(e)s",
+          "seriez venu(e)(s)",
+          "seraient venu(e)s"
+        ],
+        "subjonctif_passé": [
+          "sois venu(e)",
+          "sois venu(e)",
+          "soit venu(e)",
+          "soyons venu(e)s",
+          "soyez venu(e)(s)",
+          "soient venu(e)s"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "fusse venu(e)",
+          "fusses venu(e)",
+          "fût venu(e)",
+          "fussions venu(e)s",
+          "fussiez venu(e)(s)",
+          "fussent venu(e)s"
+        ]
+      },
+      "idioms": [
+        "venir de",
+        "s'en venir",
+        "à venir",
+        "venir à bout de"
+      ]
+    },
+    {
+      "infinitive": "vouloir",
+      "english": "to want",
+      "auxiliary": "avoir",
+      "past_participle": "voulu",
+      "tenses": {
+        "présent": [
+          "veux",
+          "veux",
+          "veut",
+          "voulons",
+          "voulez",
+          "veulent"
+        ],
+        "imparfait": [
+          "voulais",
+          "voulais",
+          "voulait",
+          "voulions",
+          "vouliez",
+          "voulaient"
+        ],
+        "passé_simple": [
+          "voulus",
+          "voulus",
+          "voulut",
+          "voulûmes",
+          "voulûtes",
+          "voulurent"
+        ],
+        "futur": [
+          "voudrai",
+          "voudras",
+          "voudra",
+          "voudrons",
+          "voudrez",
+          "voudront"
+        ],
+        "conditionnel_présent": [
+          "voudrais",
+          "voudrais",
+          "voudrait",
+          "voudrions",
+          "voudriez",
+          "voudraient"
+        ],
+        "subjonctif_présent": [
+          "veuille",
+          "veuilles",
+          "veuille",
+          "voulions",
+          "vouliez",
+          "veuillent"
+        ],
+        "imparfait_du_subjonctif": [
+          "voulusse",
+          "voulusses",
+          "voulût",
+          "voulussions",
+          "voulussiez",
+          "voulussent"
+        ],
+        "passé_composé": [
+          "ai voulu",
+          "as voulu",
+          "a voulu",
+          "avons voulu",
+          "avez voulu",
+          "ont voulu"
+        ],
+        "plus_que_parfait": [
+          "avais voulu",
+          "avais voulu",
+          "avait voulu",
+          "avions voulu",
+          "aviez voulu",
+          "avaient voulu"
+        ],
+        "passé_antérieur": [
+          "eus voulu",
+          "eus voulu",
+          "eut voulu",
+          "eûmes voulu",
+          "eûtes voulu",
+          "eurent voulu"
+        ],
+        "futur_antérieur": [
+          "aurai voulu",
+          "auras voulu",
+          "aura voulu",
+          "aurons voulu",
+          "aurez voulu",
+          "auront voulu"
+        ],
+        "conditionnel_passé": [
+          "aurais voulu",
+          "aurais voulu",
+          "aurait voulu",
+          "aurions voulu",
+          "auriez voulu",
+          "auraient voulu"
+        ],
+        "subjonctif_passé": [
+          "aie voulu",
+          "aies voulu",
+          "ait voulu",
+          "ayons voulu",
+          "ayez voulu",
+          "aient voulu"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse voulu",
+          "eusses voulu",
+          "eût voulu",
+          "eussions voulu",
+          "eussiez voulu",
+          "eussent voulu"
+        ]
+      },
+      "idioms": [
+        "en vouloir à",
+        "vouloir bien",
+        "vouloir dire"
+      ]
+    },
+    {
+      "infinitive": "être",
+      "english": "to be",
+      "auxiliary": "avoir",
+      "past_participle": "été",
+      "tenses": {
+        "présent": [
+          "suis",
+          "es",
+          "est",
+          "sommes",
+          "êtes",
+          "sont"
+        ],
+        "imparfait": [
+          "étais",
+          "étais",
+          "était",
+          "étions",
+          "étiez",
+          "étaient"
+        ],
+        "passé_simple": [
+          "fus",
+          "fus",
+          "fut",
+          "fûmes",
+          "fûtes",
+          "furent"
+        ],
+        "futur": [
+          "serai",
+          "seras",
+          "sera",
+          "serons",
+          "serez",
+          "seront"
+        ],
+        "conditionnel_présent": [
+          "serais",
+          "serais",
+          "serait",
+          "serions",
+          "seriez",
+          "seraient"
+        ],
+        "subjonctif_présent": [
+          "sois",
+          "sois",
+          "soit",
+          "soyons",
+          "soyez",
+          "soient"
+        ],
+        "imparfait_du_subjonctif": [
+          "fusse",
+          "fusses",
+          "fût",
+          "fussions",
+          "fussiez",
+          "fussent"
+        ],
+        "passé_composé": [
+          "ai été",
+          "as été",
+          "a été",
+          "avons été",
+          "avez été",
+          "ont été"
+        ],
+        "plus_que_parfait": [
+          "avais été",
+          "avais été",
+          "avait été",
+          "avions été",
+          "aviez été",
+          "avaient été"
+        ],
+        "passé_antérieur": [
+          "eus été",
+          "eus été",
+          "eut été",
+          "eûmes été",
+          "eûtes été",
+          "eurent été"
+        ],
+        "futur_antérieur": [
+          "aurai été",
+          "auras été",
+          "aura été",
+          "aurons été",
+          "aurez été",
+          "auront été"
+        ],
+        "conditionnel_passé": [
+          "aurais été",
+          "aurais été",
+          "aurait été",
+          "aurions été",
+          "auriez été",
+          "auraient été"
+        ],
+        "subjonctif_passé": [
+          "aie été",
+          "aies été",
+          "ait été",
+          "ayons été",
+          "ayez été",
+          "aient été"
+        ],
+        "plus_que_parfait_du_subjonctif": [
+          "eusse été",
+          "eusses été",
+          "eût été",
+          "eussions été",
+          "eussiez été",
+          "eussent été"
+        ]
+      },
+      "idioms": [
+        "être d'accord",
+        "être en retard",
+        "être en avance",
+        "être en forme",
+        "être en colère"
+      ]
+    }
+  ]
+}
