@@ -48,7 +48,7 @@ export default function VerbQuiz() {
   }, [question, verbs]);
 
   const handleSubmit = useCallback(() => {
-    const correct = isCorrect(input.trim(), [correctAnswer]);
+    const correct = isCorrect(input.trim(), correctAnswer);
     setResult(correct ? "correct" : "incorrect");
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
   }, [input, correctAnswer]);
