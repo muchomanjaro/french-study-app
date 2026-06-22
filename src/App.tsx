@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { supabase } from "./lib/supabase";
+import { useSync } from "./hooks/useSync";
 import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 import ExerciseSet from "./pages/ExerciseSet";
@@ -25,6 +26,16 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+function AppSyncIndicator() {
+  const { status } = useSync();
+  return (
+    <SyncIndicator
+      syncing={status === "syncing"}
+      synced={status === "online"}
+    />
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -37,7 +48,7 @@ export default function App() {
           <Route path="/verbs" element={<ProtectedRoute><VerbLookup /></ProtectedRoute>} />
           <Route path="/verbs/quiz" element={<ProtectedRoute><VerbQuiz /></ProtectedRoute>} />
         </Routes>
-        <SyncIndicator />
+        <AppSyncIndicator />
       </div>
     </BrowserRouter>
   );
