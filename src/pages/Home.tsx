@@ -77,7 +77,7 @@ export default function Home() {
         ))}
       </div>
       <div className='mt-6 text-center'>
-        <button onClick={() => navigate('/auth')} className='text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'>Sign In</button>
+        <button onClick={async () => { const {supabase} = await import('../lib/supabase'); await supabase.auth.signOut(); navigate('/auth'); }} className='text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'>Sign Out</button>
       </div>
     </div>
   );

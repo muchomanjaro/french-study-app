@@ -20,7 +20,7 @@ interface DrillCard {
 }
 
 const PRONOUNS = ["je", "tu", "il/elle", "nous", "vous", "ils/elles"];
-const TENSES = ["present", "imparfait", "futur", "conditionnel_present"];
+const TENSES = ["présent", "imparfait", "futur", "conditionnel_présent"];
 
 function generateCards(count: number): DrillCard[] {
   const cards: DrillCard[] = [];
@@ -69,10 +69,11 @@ export default function DailyDrill() {
         correct ? 4 : 1
       );
     }
+    // Always advance after a delay — correct or not
     if (currentIdx + 1 >= cards.length) {
-      setCompleted(true);
+      setTimeout(() => setCompleted(true), correct ? 1000 : 2000);
     } else {
-      setTimeout(() => setCurrentIdx((i: number) => i + 1), 1000);
+      setTimeout(() => setCurrentIdx((i: number) => i + 1), correct ? 1000 : 2000);
     }
   };
 

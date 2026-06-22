@@ -27,7 +27,8 @@ export default function ExerciseSet() {
   const totalBlanks = items.reduce((s,i) => s+(i.blanks?.length||0), 0);
   const handleCheck = (id:string, correct:boolean) => {
     setResults(p => ({...p,[id]:correct}));
-    if (correct) { setScore(s=>s+1); setSubmitted(s=>s+1); }
+    if (correct) setScore(s=>s+1);
+    if (!results[id]) setSubmitted(s=>s+1);
   };
   const reset = () => { setSelChapter(null); setSelSet(null); setResults({}); setScore(0); setSubmitted(0); };
 
@@ -76,22 +77,20 @@ export default function ExerciseSet() {
           <div className='space-y-2'>
             {item.blanks?.map(blank => (
               blank.sentence ? (() => {
-                const parts = blank.sentence.split('___');
-                const elements: React.ReactNode[] = [];
-                parts.forEach((part, i) => {
-                  if (i > 0 && i < parts.length) {
-                    elements.push(
-                      <BlankInput key={'b'+i} id={blank.id} answers={blank.answers} onCheck={handleCheck} disabled={!!results[blank.id]}/>
-                    );
-                  }
-                  if (part) elements.push(<span key={'t'+i}>{part}</span>);
-                });
+                // Trim to first clause only — take text up to and including the first blank
+                const firstOnly = blank.sentence.split('___').slice(0, 2).join('___').split('___');
+                const before = firstOnly[0] || '';
+                const after = firstOnly[1] || '';
                 return (
-                  <p key={blank.id} className="text-sm text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
-                    <span className="flex-1">{elements}</span>
+                  <p key={blank.id} className="text-sm text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2 flex-wrap">
+                    <span className="flex-1 flex items-center gap-1 flex-wrap">
+                      {before && <span>{before}</span>}
+                      <BlankInput id={blank.id} answers={blank.answers} onCheck={handleCheck} disabled={!!results[blank.id]}/>
+                      {after && <span>{after}</span>}
+                    </span>
                     <button
                       type="button"
-                      onClick={() => speak(blank.sentence!.replace('___', '…'))}
+                      onClick={() => speak(blank.sentence!.replace(/___/g, '…'))}
                       className="text-lg hover:scale-110 transition-transform flex-shrink-0"
                       title="Listen"
                       aria-label="Listen to sentence"
