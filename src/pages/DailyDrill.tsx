@@ -59,6 +59,14 @@ export default function DailyDrill() {
   const current = cards[currentIdx];
   const totalAnswered = Object.keys(results).length;
 
+  const nextCard = () => {
+    if (currentIdx + 1 >= cards.length) {
+      setCompleted(true);
+    } else {
+      setCurrentIdx((i) => i + 1);
+    }
+  };
+
   const handleCheck = (id: string, correct: boolean) => {
     if (results[id] !== undefined) return;
     const newResults = { ...results, [id]: correct };
@@ -69,11 +77,15 @@ export default function DailyDrill() {
         correct ? 4 : 1
       );
     }
-    // Always advance after a delay — correct or not
-    if (currentIdx + 1 >= cards.length) {
-      setTimeout(() => setCompleted(true), correct ? 1000 : 2000);
+    if (correct) {
+      setTimeout(() => nextCard(), 1500);
     } else {
-      setTimeout(() => setCurrentIdx((i: number) => i + 1), correct ? 1000 : 2000);
+      // Auto-advance after wrong answer with longer delay so user can read "Expected"
+      if (currentIdx + 1 >= cards.length) {
+        setTimeout(() => setCompleted(true), 2000);
+      } else {
+        setTimeout(() => setCurrentIdx((i: number) => i + 1), 2000);
+      }
     }
   };
 

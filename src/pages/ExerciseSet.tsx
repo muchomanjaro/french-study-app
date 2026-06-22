@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 import exercisesData from '../data/exercises.json';
 import answersData from '../data/answers.json';
 import BlankInput from '../components/BlankInput';
@@ -17,12 +18,30 @@ const chapters = ((exercisesData as any).chapters as Chapter[]).map(ch => ({
 }));
 
 export default function ExerciseSet() {
+  const {setId} = useParams<{setId?: string}>();
   const [selChapter, setSelChapter] = useState<typeof chapters[0]|null>(null);
   const [selSet, setSelSet] = useState<typeof chapters[0]['exercise_sets'][0]|null>(null);
   const [results, setResults] = useState<Record<string,boolean>>({});
   const [score, setScore] = useState(0);
   const [submitted, setSubmitted] = useState(0);
   const {speak} = useSpeech();
+
+  // Auto-select chapter + set from URL param (e.g. /exercise/ch01_1)
+  useEffect(() => {
+    if (!setId) return;
+    const match = setId.match(/^(ch\d+)_(\d+)$/);
+    if (!match) return;
+    const chapterId = match[1];
+    const setIndex = parseInt(match[2], 10) - 1; // 1-indexed in URL
+    const chapter = chapters.find(c => c.id === chapterId);
+    if (!chapter) return;
+    setSelChapter(chapter);
+    const available = chapter.exercise_sets.filter(s => s.items.length > 0);
+    if (available[setIndex]) {
+      setSelSet(available[setIndex]);
+    }
+  }, [setId]);
+
   const items = selSet?.items || [];
   const totalBlanks = items.reduce((s,i) => s+(i.blanks?.length||0), 0);
   const handleCheck = (id:string, correct:boolean) => {

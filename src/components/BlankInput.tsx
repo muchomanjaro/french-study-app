@@ -1,9 +1,79 @@
 import {useState} from 'react';
 import {isCorrect} from '../lib/fuzzy';
-interface BlankInputProps{id:string;answers:string[];onCheck:(id:string,correct:boolean)=>void;disabled?:boolean;}
-export default function BlankInput({id,answers,onCheck,disabled}:BlankInputProps){const[value,setValue]=useState('');const[checked,setChecked]=useState(false);const[correct,setCorrect]=useState(false);
-const handleSubmit=(e:React.FormEvent)=>{e.preventDefault();if(!value.trim()||disabled)return;const c=answers.some(a=>isCorrect(value.trim(),a));setCorrect(c);setChecked(true);onCheck(id,c);};
-const reset=()=>{setValue('');setChecked(false);};
-if(checked){return(<div className={'p-3 rounded-lg border '+(correct?'bg-green-50 border-green-300 dark:bg-green-900/20 dark:border-green-700':'bg-red-50 border-red-300 dark:bg-red-900/20 dark:border-red-700')}><p className={'text-sm '+(correct?'text-green-700 dark:text-green-300':'text-red-700 dark:text-red-300')}>{correct?'Correct!':'Incorrect'}</p><p className='text-xs text-gray-500 mt-1 dark:text-gray-400'>Expected: {answers.join(', ')}</p><button onClick={reset} className='mt-2 text-xs text-blue-600 hover:underline dark:text-blue-400'>Try again</button></div>);}
-return(<form onSubmit={handleSubmit} className='flex gap-2'><input type='text' value={value} onChange={e=>setValue(e.target.value)} disabled={disabled} placeholder='Type your answer...' className='flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-white' autoComplete='off'/><button type='submit' disabled={!value.trim()||disabled} className='px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-600'>Check</button></form>);
+
+interface BlankInputProps {
+  id: string;
+  answers: string[];
+  onCheck: (id: string, correct: boolean) => void;
+  disabled?: boolean;
+}
+
+export default function BlankInput({id, answers, onCheck, disabled}: BlankInputProps) {
+  const [value, setValue] = useState('');
+  const [checked, setChecked] = useState(false);
+  const [correct, setCorrect] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!value.trim() || disabled) return;
+    const c = answers.some(a => isCorrect(value.trim(), a));
+    setCorrect(c);
+    setChecked(true);
+    onCheck(id, c);
+  };
+
+  const reset = () => {
+    setValue('');
+    setChecked(false);
+  };
+
+  if (checked) {
+    return (
+      <div className={
+        'p-3 rounded-lg border ' +
+        (correct
+          ? 'bg-green-50 border-green-300 dark:bg-green-900/20 dark:border-green-700'
+          : 'bg-red-50 border-red-300 dark:bg-red-900/20 dark:border-red-700')
+      }>
+        <p className={
+          'text-sm ' +
+          (correct ? 'text-green-700 dark:text-green-300' : 'text-red-700 dark:text-red-300')
+        }>
+          {correct ? 'Correct!' : 'Incorrect'}
+        </p>
+        <p className='text-xs text-gray-500 mt-1 dark:text-gray-400'>
+          Expected: {answers.join(', ')}
+        </p>
+        {!correct && (
+          <button
+            onClick={reset}
+            className='mt-2 text-xs text-blue-600 hover:underline dark:text-blue-400'
+          >
+            Try again
+          </button>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className='flex gap-2'>
+      <input
+        type='text'
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        disabled={disabled}
+        placeholder='Type your answer...'
+        className='flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-white'
+        autoComplete='off'
+      />
+      <button
+        type='submit'
+        disabled={!value.trim() || disabled}
+        className='px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-600'
+      >
+        Check
+      </button>
+    </form>
+  );
 }
