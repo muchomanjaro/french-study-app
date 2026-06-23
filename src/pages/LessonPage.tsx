@@ -21,6 +21,13 @@ interface Chapter {
 
 const chapters = (exercisesData as any).chapters as Chapter[];
 
+function cleanLessonText(raw: string): string {
+  return raw
+    .replace(/\s+/g, ' ')
+    .replace(/ (•|!\(|J>|\(«)/g, '\n\n$1')
+    .trim();
+}
+
 export default function LessonPage() {
   const { chapterId } = useParams<{ chapterId: string }>();
   const navigate = useNavigate();
@@ -107,8 +114,12 @@ export default function LessonPage() {
         className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-5 mb-4 max-h-[50vh] overflow-y-auto"
         onScroll={handleScroll}
       >
-        <div className="prose prose-sm dark:prose-invert whitespace-pre-line text-gray-700 dark:text-gray-300 leading-relaxed">
-          {lessonText || (
+        <div className="prose prose-sm dark:prose-invert text-gray-700 dark:text-gray-300 leading-relaxed">
+          {lessonText ? (
+            cleanLessonText(lessonText).split('\n\n').map((p, i) => (
+              <p key={i} className="mb-3">{p}</p>
+            ))
+          ) : (
             <p className="text-gray-400 italic">Lesson content coming soon.</p>
           )}
         </div>

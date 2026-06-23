@@ -53,6 +53,7 @@ export default function Home() {
     { label: "Verbs", desc: "Conjugation", path: "/verbs", icon: "🔍", color: "bg-purple-500" },
     { label: "Practice", desc: "Exercises", path: "/exercise/ch01_p009", icon: "✏️", color: "bg-green-500" },
     { label: "Quiz", desc: "Verb Quiz", path: "/verbs/quiz", icon: "🎯", color: "bg-amber-500" },
+    { label: "Drill", desc: "Daily SRS Review", path: "/drill", icon: "📝", color: "bg-orange-500" },
   ];
 
   const signOut = async () => {
