@@ -4,7 +4,9 @@ import { supabase } from "./lib/supabase";
 import { useSync } from "./hooks/useSync";
 import Auth from "./pages/Auth";
 import Home from "./pages/Home";
+import LessonPage from "./pages/LessonPage";
 import ExerciseSet from "./pages/ExerciseSet";
+import BilanPage from "./pages/BilanPage";
 import DailyDrill from "./pages/DailyDrill";
 import VerbLookup from "./pages/VerbLookup";
 import VerbQuiz from "./pages/VerbQuiz";
@@ -43,10 +45,13 @@ export default function App() {
         <Routes>
           <Route path="/auth" element={<Auth />} />
           <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/lesson/:chapterId" element={<ProtectedRoute><LessonPage /></ProtectedRoute>} />
           <Route path="/exercise/:setId" element={<ProtectedRoute><ExerciseSet /></ProtectedRoute>} />
+          <Route path="/bilan/:bilanId" element={<ProtectedRoute><BilanPage /></ProtectedRoute>} />
           <Route path="/drill" element={<ProtectedRoute><DailyDrill /></ProtectedRoute>} />
           <Route path="/verbs" element={<ProtectedRoute><VerbLookup /></ProtectedRoute>} />
           <Route path="/verbs/quiz" element={<ProtectedRoute><VerbQuiz /></ProtectedRoute>} />
+          <Route path="/verbs/quiz/:tense" element={<ProtectedRoute><VerbQuiz /></ProtectedRoute>} />
         </Routes>
         <AppSyncIndicator />
       </div>

@@ -10,6 +10,8 @@ let syncInProgress = false;
 
 const SYNC_TABLES = [
   { local: "progress", remote: "progress", primaryKey: "id" },
+  { local: "studyProgress", remote: "study_progress", primaryKey: "id" },
+  { local: "exerciseProgress", remote: "exercise_progress", primaryKey: "id" },
   { local: "drillQueue", remote: "drill_queue", primaryKey: "id" },
   { local: "verbHistory", remote: "verb_quiz_history", primaryKey: "id" },
 ] as const;

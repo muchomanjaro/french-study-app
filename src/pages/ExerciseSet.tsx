@@ -1,16 +1,20 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 import exercisesData from '../data/exercises.json';
 import answersData from '../data/answers.json';
 import BlankInput from '../components/BlankInput';
 import ProgressBar from '../components/ProgressBar';
 import ScoreCard from '../components/ScoreCard';
 import {useSpeech} from '../hooks/useSpeech';
+import {supabase} from '../lib/supabase';
+import {useStudyProgress} from '../hooks/useStudyProgress';
 
 interface Blank {id:string; answers:string[]; sentence?:string;}
 interface ExItem {id:string; open_ended?:boolean; blanks:Blank[];}
 interface ExSet {id:string; page?:number; label?:string; type?:string; lesson_text?:string; items:ExItem[];}
-interface Chapter {id:string; title:string; exercise_sets:ExSet[];}
+
+
+interface Chapter {id:string; title:string; bilan_refs?:string[]; exercise_sets:ExSet[];}
 const answers = answersData as Record<string, {items:ExItem[]}>;
 const chapters = ((exercisesData as any).chapters as Chapter[]).map(ch => ({
   ...ch,
@@ -19,12 +23,22 @@ const chapters = ((exercisesData as any).chapters as Chapter[]).map(ch => ({
 
 export default function ExerciseSet() {
   const {setId} = useParams<{setId?: string}>();
+  const navigate = useNavigate();
+  const [userId, setUserId] = useState<string | null>(null);
   const [selChapter, setSelChapter] = useState<typeof chapters[0]|null>(null);
   const [selSet, setSelSet] = useState<typeof chapters[0]['exercise_sets'][0]|null>(null);
   const [results, setResults] = useState<Record<string,boolean>>({});
   const [score, setScore] = useState(0);
   const [submitted, setSubmitted] = useState(0);
+  const [showBilanCta, setShowBilanCta] = useState(false);
   const {speak} = useSpeech();
+  const {markExerciseComplete, chapterProgress} = useStudyProgress(userId);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({data}) => {
+      setUserId(data.session?.user?.id ?? null);
+    });
+  }, []);
 
   // Auto-select chapter + set from URL param (e.g. /exercise/ch01_1)
   useEffect(() => {
@@ -32,7 +46,7 @@ export default function ExerciseSet() {
     const match = setId.match(/^(ch\d+)_(\d+)$/);
     if (!match) return;
     const chapterId = match[1];
-    const setIndex = parseInt(match[2], 10) - 1; // 1-indexed in URL
+    const setIndex = parseInt(match[2], 10) - 1;
     const chapter = chapters.find(c => c.id === chapterId);
     if (!chapter) return;
     setSelChapter(chapter);
@@ -49,7 +63,25 @@ export default function ExerciseSet() {
     if (correct) setScore(s=>s+1);
     if (!results[id]) setSubmitted(s=>s+1);
   };
-  const reset = () => { setSelChapter(null); setSelSet(null); setResults({}); setScore(0); setSubmitted(0); };
+
+  // Track exercise completion and check bilan eligibility
+  useEffect(() => {
+    if (submitted < totalBlanks || totalBlanks === 0 || !userId || !selSet || !selChapter) return;
+    
+    // Mark this exercise set as complete
+    const pct = Math.round((score / totalBlanks) * 100);
+    markExerciseComplete(selSet.id, pct).catch(() => {});
+
+    // Check if all exercises in this chapter are complete — show Bilan CTA
+    const chData = chapterProgress.get(selChapter.id);
+    const totalSets = selChapter.exercise_sets.filter(s => s.type === 'exercise' && s.items.length > 0).length;
+    const doneCount = (chData?.exercisesDone ?? 0) + 1; // +1 for this set
+    if (doneCount >= totalSets && selChapter.bilan_refs?.length) {
+      setShowBilanCta(true);
+    }
+  }, [submitted, totalBlanks, userId, selSet, selChapter, score]);
+
+  const reset = () => { setSelChapter(null); setSelSet(null); setResults({}); setScore(0); setSubmitted(0); setShowBilanCta(false); };
 
   if (!selChapter) return (
     <div className='p-4 max-w-lg mx-auto'>
@@ -129,6 +161,14 @@ export default function ExerciseSet() {
       {submitted >= totalBlanks && totalBlanks > 0 && (
         <div className='mt-6'>
           <ScoreCard score={score} total={totalBlanks} label='Exercise Complete!'/>
+          {showBilanCta && selChapter?.bilan_refs?.length && (
+            <button
+              onClick={() => navigate(`/bilan/${selChapter.bilan_refs![0]}`)}
+              className='mt-3 w-full py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm font-medium'
+            >
+              📝 Take Bilan — Review Chapter
+            </button>
+          )}
           <button onClick={reset} className='mt-3 w-full py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm'>Back to Lessons</button>
         </div>
       )}

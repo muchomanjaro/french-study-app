@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import verbsData from "../data/verbs.json";
 import VerbChip from "../components/VerbChip";
 
@@ -31,6 +32,7 @@ const TENSE_LABELS: Record<string, string> = {
 const PRONOUNS = ["je", "tu", "il/elle/on", "nous", "vous", "ils/elles"];
 
 export default function VerbLookup() {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [selectedVerb, setSelectedVerb] = useState<Verb | null>(null);
   const [selectedTense, setSelectedTense] = useState("présent");
@@ -119,6 +121,14 @@ export default function VerbLookup() {
               ))}
             </tbody>
           </table>
+
+          {/* Quiz Me on This Tense button */}
+          <button
+            onClick={() => navigate(`/verbs/quiz/${selectedTense}`)}
+            className="w-full mt-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium transition-colors"
+          >
+            🎯 Quiz Me on {TENSE_LABELS[selectedTense] || selectedTense.replace(/_/g, ' ')}
+          </button>
 
           {selectedVerb.idioms.length > 0 && (
             <div className="mt-4 pt-4 border-t">

@@ -9,6 +9,29 @@ export interface LocalProgress {
   status: "not_started" | "in_progress" | "completed";
   score_pct: number | null;
   completed_at: string | null;
+  study_completed: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface LocalStudyProgress {
+  id: string;
+  user_id: string;
+  entity_type: "chapter" | "tense";
+  entity_id: string;
+  study_completed_at: string | null;
+  exercises_completed_at: string | null;
+  quiz_completed_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface LocalExerciseProgress {
+  id: string;
+  user_id: string;
+  exercise_set_id: string;
+  score_pct: number | null;
+  completed_at: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -55,6 +78,8 @@ export interface VersionedRecord {
 
 export class FrenchStudyDB extends Dexie {
   progress!: Table<LocalProgress, string>;
+  studyProgress!: Table<LocalStudyProgress, string>;
+  exerciseProgress!: Table<LocalExerciseProgress, string>;
   drillQueue!: Table<LocalDrillQueueItem, string>;
   verbHistory!: Table<LocalVerbQuizRecord, string>;
   versioned!: Table<VersionedRecord, string>;
@@ -67,6 +92,17 @@ export class FrenchStudyDB extends Dexie {
       drillQueue: "id, user_id, exercise_set_id, due_at, updated_at",
       verbHistory: "id, user_id, verb_infinitive, tense, quizzed_at",
       versioned: "key, table_name, record_id, server_updated_at, synced, local_updated_at",
+    });
+
+    this.version(2).stores({
+      progress: "id, user_id, exercise_set_id, status, updated_at",
+      drillQueue: "id, user_id, exercise_set_id, due_at, updated_at",
+      verbHistory: "id, user_id, verb_infinitive, tense, quizzed_at",
+      versioned: "key, table_name, record_id, server_updated_at, synced, local_updated_at",
+      studyProgress: "id, user_id, entity_type, entity_id, updated_at",
+      exerciseProgress: "id, user_id, exercise_set_id, updated_at",
+    }).upgrade(tx => {
+      // No data migration needed — study_progress starts empty
     });
   }
 }
