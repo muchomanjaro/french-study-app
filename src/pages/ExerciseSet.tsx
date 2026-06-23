@@ -40,18 +40,26 @@ export default function ExerciseSet() {
     });
   }, []);
 
-  // Auto-select chapter + set from URL param (e.g. /exercise/ch01_1)
+  // Auto-select chapter + set from URL param (e.g. /exercise/ch01_1 or /exercise/ch01_p009)
   useEffect(() => {
     if (!setId) return;
-    const match = setId.match(/^(ch\d+)_(\d+)$/);
+    const match = setId.match(/^(ch\d+)_(.+)$/);
     if (!match) return;
     const chapterId = match[1];
-    const setIndex = parseInt(match[2], 10) - 1;
+    const setIdent = match[2];
     const chapter = chapters.find(c => c.id === chapterId);
     if (!chapter) return;
     setSelChapter(chapter);
     const available = chapter.exercise_sets.filter(s => s.items.length > 0);
-    if (available[setIndex]) {
+    // First, try to find the set by its full ID (e.g. ch01_p009)
+    const directSet = available.find(s => s.id === setId);
+    if (directSet) {
+      setSelSet(directSet);
+      return;
+    }
+    // Fall back to numeric index (e.g. ch01_1 -> first available set)
+    const setIndex = parseInt(setIdent, 10) - 1;
+    if (!isNaN(setIndex) && available[setIndex]) {
       setSelSet(available[setIndex]);
     }
   }, [setId]);
