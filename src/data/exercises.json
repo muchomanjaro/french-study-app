@@ -14,7 +14,83 @@
           "type": "exercise",
           "lesson_text": "LE VERBE « ÊTRE » \nLE VERBE « ETRE » et LES PRONOMS SUJETS \nJe \nsuis \nitalien. \nTu \nes \naméricain. \n11 1 \nElle \nest \nà Paris. \nOn J \nNous sommes en vacances. \nVous \nêtes \nde Madrid ? \nIls 1 \nElles \nsont \nde Londres. \n« VOUS » : forme de politesse ou pluriel. \n- Vous êtes prêt, monsieur ? \n- Vous êtes prêts, les enfants ? \n« TU » : pour les amis, la famille. \n- Tu es prêt, papa ? \n- Tu es prêt, mon chéri ? \n•* Avec les prénoms, on utilise « vous » ou « tu » selon le degré de familiarité : \n- Vous êtes prêt, Max ? (moins familier) \n- Tu es prêt, Max ? \n(plus familier) \n« IL » et « ELLE » renvoient à une personne ou à une chose : \nElle est belle, Isabelle. \nIl est beau, Kevin. \nElle est belle, la tour Eiffel. \nIl est beau, le musée d'Orsay. \n!\\ \n• « Ils » renvoie à un groupe masculin ou « mixte » : \nPaul, Marie, Cathy et Julie sont français. Ils sont de Nice. \n« ON » et « NOUS » \n• « On » = « nous », en langage courant : \nPaul et moi, nous sommes français. On est de Nice. \nverbe au pluriel \nverbe au singulier \n• « On » signifie aussi « tout le monde » (« les gens ») : \nEn France, on est gourmand : tout le monde est gourmand. \nJ> \nLa liaison est obligatoire entre le pronom et le verbe : \nVousjêtes \nOnjest \nz \nn \n(« c'est/il est », p. 32) - (accords, p. 16) \n10 • dix",
           "verbs_mentioned": [],
-          "items": []
+          "items": [
+            {
+              "id": "i01",
+              "open_ended": false,
+              "blanks": [
+                {
+                  "id": "b1",
+                  "sentence": "Je ___ français.",
+                  "answers": [
+                    "suis"
+                  ]
+                },
+                {
+                  "id": "b2",
+                  "sentence": "Tu ___ américain.",
+                  "answers": [
+                    "es"
+                  ]
+                },
+                {
+                  "id": "b3",
+                  "sentence": "Elle ___ à Paris.",
+                  "answers": [
+                    "est"
+                  ]
+                },
+                {
+                  "id": "b4",
+                  "sentence": "Nous ___ en vacances.",
+                  "answers": [
+                    "sommes"
+                  ]
+                },
+                {
+                  "id": "b5",
+                  "sentence": "Vous ___ de Madrid ?",
+                  "answers": [
+                    "êtes"
+                  ]
+                },
+                {
+                  "id": "b6",
+                  "sentence": "Ils ___ de Londres.",
+                  "answers": [
+                    "sont"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "i02",
+              "open_ended": false,
+              "blanks": [
+                {
+                  "id": "b1",
+                  "sentence": "Je suis ___ Berlin.",
+                  "answers": [
+                    "à"
+                  ]
+                },
+                {
+                  "id": "b2",
+                  "sentence": "Elle ___ de Rome.",
+                  "answers": [
+                    "est"
+                  ]
+                },
+                {
+                  "id": "b3",
+                  "sentence": "Vous ___ de Madrid.",
+                  "answers": [
+                    "êtes"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "ch01_p011",
@@ -23,7 +99,83 @@
           "type": "exercise",
           "lesson_text": "LE VERBE « ÊTRE » \nLE VERBE « ETRE » et LES PRONOMS SUJETS \nJe \nsuis \nitalien. \nTu \nes \naméricain. \n11 1 \nElle \nest \nà Paris. \nOn J \nNous sommes en vacances. \nVous \nêtes \nde Madrid ? \nIls 1 \nElles \nsont \nde Londres. \n« VOUS » : forme de politesse ou pluriel. \n- Vous êtes prêt, monsieur ? \n- Vous êtes prêts, les enfants ? \n« TU » : pour les amis, la famille. \n- Tu es prêt, papa ? \n- Tu es prêt, mon chéri ? \n•* Avec les prénoms, on utilise « vous » ou « tu » selon le degré de familiarité : \n- Vous êtes prêt, Max ? (moins familier) \n- Tu es prêt, Max ? \n(plus familier) \n« IL » et « ELLE » renvoient à une personne ou à une chose : \nElle est belle, Isabelle. \nIl est beau, Kevin. \nElle est belle, la tour Eiffel. \nIl est beau, le musée d'Orsay. \n!\\ \n• « Ils » renvoie à un groupe masculin ou « mixte » : \nPaul, Marie, Cathy et Julie sont français. Ils sont de Nice. \n« ON » et « NOUS » \n• « On » = « nous », en langage courant : \nPaul et moi, nous sommes français. On est de Nice. \nverbe au pluriel \nverbe au singulier \n• « On » signifie aussi « tout le monde » (« les gens ») : \nEn France, on est gourmand : tout le monde est gourmand. \nJ> \nLa liaison est obligatoire entre le pronom et le verbe : \nVousjêtes \nOnjest \nz \nn \n(« c'est/il est », p. 32) - (accords, p. 16) \n10 • dix",
           "verbs_mentioned": [],
-          "items": []
+          "items": [
+            {
+              "id": "i01",
+              "open_ended": false,
+              "blanks": [
+                {
+                  "id": "b1",
+                  "sentence": "Je ___ prêt.",
+                  "answers": [
+                    "suis"
+                  ]
+                },
+                {
+                  "id": "b2",
+                  "sentence": "Tu ___ prêt, mon chéri ?",
+                  "answers": [
+                    "es"
+                  ]
+                },
+                {
+                  "id": "b3",
+                  "sentence": "Il ___ beau, le musée d'Orsay.",
+                  "answers": [
+                    "est"
+                  ]
+                },
+                {
+                  "id": "b4",
+                  "sentence": "Nous ___ de Nice.",
+                  "answers": [
+                    "sommes"
+                  ]
+                },
+                {
+                  "id": "b5",
+                  "sentence": "Vous ___ prêt, monsieur ?",
+                  "answers": [
+                    "êtes"
+                  ]
+                },
+                {
+                  "id": "b6",
+                  "sentence": "Paul et Marie ___ français.",
+                  "answers": [
+                    "sont"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "i02",
+              "open_ended": false,
+              "blanks": [
+                {
+                  "id": "b1",
+                  "sentence": "En France, on ___ gourmand.",
+                  "answers": [
+                    "est"
+                  ]
+                },
+                {
+                  "id": "b2",
+                  "sentence": "Vous ___ prêts, les enfants ?",
+                  "answers": [
+                    "êtes"
+                  ]
+                },
+                {
+                  "id": "b3",
+                  "sentence": "Elle ___ belle, la tour Eiffel.",
+                  "answers": [
+                    "est"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
