@@ -67,8 +67,10 @@ export function useSync(): SyncState {
       const database = getDb();
       const supabase = getSupabaseClient();
       if (!supabase) {
-        setStatus("online");
-        setError("Supabase not configured");
+        // Supabase not configured — app works locally, no sync available
+        console.debug("[sync] Supabase not configured — running offline-capable");
+        setStatus(navigator.onLine ? "online" : "offline");
+        setError(null); // Not an error worth alarming the user about
         return;
       }
       const unsynced = await database.attempts.where("synced").equals(false).toArray();
@@ -91,9 +93,12 @@ export function useSync(): SyncState {
       await refreshPendingCount();
       setStatus(navigator.onLine ? "online" : "offline");
     } catch (err: unknown) {
+      // Sync failures are non-fatal — don't show "Offline" badge for transient issues.
+      // Only set error state for debugging; status reflects actual network state.
       const msg = err instanceof Error ? err.message : "Sync failed";
+      console.debug("[sync] transient error:", msg);
       setError(msg);
-      setStatus("error");
+      setStatus(navigator.onLine ? "online" : "offline");
     } finally {
       syncingRef.current = false;
     }
