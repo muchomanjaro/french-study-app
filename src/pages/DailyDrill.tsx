@@ -40,6 +40,60 @@ interface DrillCard {
   answers?: string[];
 }
 
+
+/** Generate fallback drill cards from first available chapter when no study data exists */
+function generateFallbackCards(): DrillCard[] {
+  const cards: DrillCard[] = [];
+  // Use first chapter's fill-in exercises as seed
+  const firstChapter = chapters[0];
+  if (!firstChapter) return cards;
+  
+  for (const set of firstChapter.exercise_sets) {
+    if (set.type === "bilan") continue;
+    const setAnswers = answers[set.id];
+    if (!setAnswers?.items) continue;
+    for (const item of setAnswers.items.slice(0, 3)) { // max 3 items per set
+      for (const blank of item.blanks) {
+        if (blank.sentence && blank.answers.length > 0) {
+          cards.push({
+            id: `drill-fb-${cards.length}`,
+            prompt: "Complete the sentence",
+            correctAnswer: blank.answers[0],
+            type: "fillin",
+            sentence: blank.sentence,
+            answers: blank.answers,
+          });
+        }
+        if (cards.length >= 7) return cards;
+      }
+    }
+    if (cards.length >= 7) break;
+  }
+  
+  // Add verb conjugation cards from first tense if not enough fill-ins
+  if (cards.length < 7 && verbList.length > 0) {
+    for (const v of verbList.slice(0, 4)) {
+      const tenses = Object.keys(v.tenses).filter(t => v.tenses[t].length >= 6);
+      if (tenses.length === 0) continue;
+      const tense = tenses[0];
+      for (let pi = 0; pi < Math.min(3, v.tenses[tense].length); pi++) {
+        cards.push({
+          id: `drill-fb-v-${cards.length}`,
+          prompt: `Conjugate '${v.infinitive}' (${v.english}) in ${tense.replace(/_/g, ' ')} for '${PRONOUNS[pi]}'`,
+          correctAnswer: v.tenses[tense][pi],
+          type: "verb",
+          infinitive: v.infinitive,
+          tense,
+          pronounIdx: pi,
+        });
+        if (cards.length >= 7) return cards;
+      }
+    }
+  }
+  
+  return cards;
+}
+
 async function generateCards(userId: string, count: number): Promise<DrillCard[]> {
   const cards: DrillCard[] = [];
 
@@ -173,8 +227,14 @@ export default function DailyDrill() {
     setCompleted(false);
   };
 
-  // No-studied-material state
+  // No-studied-material state — generate fallback cards from first chapter
   if (cards !== null && cards.length === 0) {
+    // Fallback: generate cards from first available chapter exercises
+    const fallbackCards = generateFallbackCards();
+    if (fallbackCards.length > 0) {
+      setCards(fallbackCards);
+      return null; // will re-render with real cards
+    }
     return (
       <div className="p-4 max-w-lg mx-auto text-center">
         <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Daily Drill</h1>
